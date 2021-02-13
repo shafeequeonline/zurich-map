@@ -2,10 +2,5 @@
 @import 'partials/mixins';
 @import 'partials/base';
 
-body {
-    background-color: rebeccapurple;
-}
-
-.header {
-    background-color: orange;
-}
+@import 'partials/filter';
+@import 'partials/marker'

@@ -1,0 +1,302 @@
+[
+    {
+      "Coordinates": "POINT(47.3836514 8.5482374)",
+      "Price/m^2": 2770,
+      "BuildingType": "Residential",
+      "Parking": "x"
+    },
+    {
+      "Coordinates": "POINT(47.3550125 8.603635)",
+      "Price/m^2": 4080,
+      "BuildingType": "Offices",
+      "Parking": ""
+    },
+    {
+      "Coordinates": "POINT(47.4097838 8.5413488)",
+      "Price/m^2": 1300,
+      "BuildingType": "Commercial",
+      "Parking": "x"
+    },
+    {
+      "Coordinates": "POINT(47.3781281 8.5294908)",
+      "Price/m^2": 1540,
+      "BuildingType": "Industrial",
+      "Parking": ""
+    },
+    {
+      "Coordinates": "POINT(47.3836514 8.5482374)",
+      "Price/m^2": 2770,
+      "BuildingType": "Mixed use",
+      "Parking": "x"
+    },
+    {
+      "Coordinates": "POINT(47.3550125 8.603635)",
+      "Price/m^2": 4080,
+      "BuildingType": "Residential",
+      "Parking": "x"
+    },
+    {
+      "Coordinates": "POINT(47.4097838 8.5413488)",
+      "Price/m^2": 1300,
+      "BuildingType": "Residential",
+      "Parking": ""
+    },
+    {
+      "Coordinates": "POINT(47.3781281 8.5294908)",
+      "Price/m^2": 1540,
+      "BuildingType": "Commercial",
+      "Parking": "x"
+    },
+    {
+      "Coordinates": "POINT(47.4192229 8.5494563)",
+      "Price/m^2": 1880,
+      "BuildingType": "Commercial",
+      "Parking": ""
+    },
+    {
+      "Coordinates": "POINT(47.4107556 8.5327957)",
+      "Price/m^2": 1650,
+      "BuildingType": "Commercial",
+      "Parking": "x"
+    },
+    {
+      "Coordinates": "POINT(47.4057257 8.5682659)",
+      "Price/m^2": 1395,
+      "BuildingType": "Mixed use",
+      "Parking": "x"
+    },
+    {
+      "Coordinates": "POINT(47.4155082 8.4797136)",
+      "Price/m^2": 1640,
+      "BuildingType": "Industrial",
+      "Parking": ""
+    },
+    {
+      "Coordinates": "POINT(47.3607583 8.5521945)",
+      "Price/m^2": 2820,
+      "BuildingType": "Offices",
+      "Parking": "x"
+    },
+    {
+      "Coordinates": "POINT(47.3774203 8.527458)",
+      "Price/m^2": 1450,
+      "BuildingType": "Offices",
+      "Parking": ""
+    },
+    {
+      "Coordinates": "POINT(47.3772294 8.5272474)",
+      "Price/m^2": 1500,
+      "BuildingType": "Industrial",
+      "Parking": "x"
+    },
+    {
+      "Coordinates": "POINT(47.407377 8.5688857)",
+      "Price/m^2": 730,
+      "BuildingType": "Industrial",
+      "Parking": "x"
+    },
+    {
+      "Coordinates": "POINT(47.4260168 8.5482461)",
+      "Price/m^2": 1480,
+      "BuildingType": "Residential",
+      "Parking": "x"
+    },
+    {
+      "Coordinates": "POINT(47.3708705 8.501086)",
+      "Price/m^2": 1420,
+      "BuildingType": "Residential",
+      "Parking": "x"
+    },
+    {
+      "Coordinates": "POINT(47.3787006 8.5290454)",
+      "Price/m^2": 1170,
+      "BuildingType": "Offices",
+      "Parking": ""
+    },
+    {
+      "Coordinates": "POINT(47.3687377 8.5021689)",
+      "Price/m^2": 1600,
+      "BuildingType": "Offices",
+      "Parking": ""
+    },
+    {
+      "Coordinates": "POINT(47.4039913 8.5865811)",
+      "Price/m^2": 1430,
+      "BuildingType": "Industrial",
+      "Parking": "x"
+    },
+    {
+      "Coordinates": "POINT(47.376962 8.5283591)",
+      "Price/m^2": 1526,
+      "BuildingType": "Commercial",
+      "Parking": "x"
+    },
+    {
+      "Coordinates": "POINT(47.4131171 8.5445717)",
+      "Price/m^2": 1575,
+      "BuildingType": "Industrial",
+      "Parking": "x"
+    },
+    {
+      "Coordinates": "POINT(47.3741362 8.4852743)",
+      "Price/m^2": 2250,
+      "BuildingType": "Offices",
+      "Parking": "x"
+    },
+    {
+      "Coordinates": "POINT(47.3785416 8.5639165)",
+      "Price/m^2": 3400,
+      "BuildingType": "Mixed use",
+      "Parking": "x"
+    },
+    {
+      "Coordinates": "POINT(47.3952916 8.522014)",
+      "Price/m^2": 2260,
+      "BuildingType": "Mixed use",
+      "Parking": ""
+    },
+    {
+      "Coordinates": "POINT(47.3550125 8.603635)",
+      "Price/m^2": 3470,
+      "BuildingType": "Mixed use",
+      "Parking": ""
+    },
+    {
+      "Coordinates": "POINT(47.3550125 8.603635)",
+      "Price/m^2": 4650,
+      "BuildingType": "Residential",
+      "Parking": "x"
+    },
+    {
+      "Coordinates": "POINT(47.3540935 8.5553344)",
+      "Price/m^2": 1190,
+      "BuildingType": "Commercial",
+      "Parking": "x"
+    },
+    {
+      "Coordinates": "POINT(47.4311159 8.5417774)",
+      "Price/m^2": 3100,
+      "BuildingType": "Commercial",
+      "Parking": ""
+    },
+    {
+      "Coordinates": "POINT(47.4093435 8.5314723)",
+      "Price/m^2": 1450,
+      "BuildingType": "Industrial",
+      "Parking": "x"
+    },
+    {
+      "Coordinates": "POINT(47.3981463 8.5882039)",
+      "Price/m^2": 850,
+      "BuildingType": "Mixed use",
+      "Parking": "x"
+    },
+    {
+      "Coordinates": "POINT(47.3860685 8.4887006)",
+      "Price/m^2": 1600,
+      "BuildingType": "Offices",
+      "Parking": "x"
+    },
+    {
+      "Coordinates": "POINT(47.4049961 8.5464462)",
+      "Price/m^2": 2200,
+      "BuildingType": "Offices",
+      "Parking": "x"
+    },
+    {
+      "Coordinates": "POINT(47.3714175 8.5213961)",
+      "Price/m^2": 3150,
+      "BuildingType": "Commercial",
+      "Parking": ""
+    },
+    {
+      "Coordinates": "POINT(47.3834952 8.5428047)",
+      "Price/m^2": 1590,
+      "BuildingType": "Mixed use",
+      "Parking": "x"
+    },
+    {
+      "Coordinates": "POINT(47.3793183 8.5317958)",
+      "Price/m^2": 3196,
+      "BuildingType": "Mixed use",
+      "Parking": ""
+    },
+    {
+      "Coordinates": "POINT(47.3375577 8.5266948)",
+      "Price/m^2": 1730,
+      "BuildingType": "Commercial",
+      "Parking": ""
+    },
+    {
+      "Coordinates": "POINT(47.3633783 8.5597119)",
+      "Price/m^2": 2900,
+      "BuildingType": "Mixed use",
+      "Parking": "x"
+    },
+    {
+      "Coordinates": "POINT(47.3576212 8.5729142)",
+      "Price/m^2": 2595,
+      "BuildingType": "Industrial",
+      "Parking": ""
+    },
+    {
+      "Coordinates": "POINT(47.4197679 8.5107819)",
+      "Price/m^2": 1810,
+      "BuildingType": "Industrial",
+      "Parking": "x"
+    },
+    {
+      "Coordinates": "POINT(47.3918765 8.4917187)",
+      "Price/m^2": 2000,
+      "BuildingType": "Residential",
+      "Parking": ""
+    },
+    {
+      "Coordinates": "POINT(47.3676673 8.5309105)",
+      "Price/m^2": 2090,
+      "BuildingType": "Residential",
+      "Parking": "x"
+    },
+    {
+      "Coordinates": "POINT(47.3732226 8.5441272)",
+      "Price/m^2": 2510,
+      "BuildingType": "Commercial",
+      "Parking": ""
+    },
+    {
+      "Coordinates": "POINT(47.4052478 8.5472437)",
+      "Price/m^2": 1770,
+      "BuildingType": "Residential",
+      "Parking": ""
+    },
+    {
+      "Coordinates": "POINT(47.4041114 8.5558533)",
+      "Price/m^2": 1900,
+      "BuildingType": "Mixed use",
+      "Parking": ""
+    },
+    {
+      "Coordinates": "POINT(47.3810326 8.5583433)",
+      "Price/m^2": 3110,
+      "BuildingType": "Commercial",
+      "Parking": "x"
+    },
+    {
+      "Coordinates": "POINT(47.3646544 8.5105568)",
+      "Price/m^2": 2380,
+      "BuildingType": "Residential",
+      "Parking": ""
+    },
+    {
+      "Coordinates": "POINT(47.4146582 8.5681945)",
+      "Price/m^2": 1542,
+      "BuildingType": "Residential",
+      "Parking": ""
+    },
+    {
+      "Coordinates": "POINT(47.4013334 8.5448032)",
+      "Price/m^2": 931,
+      "BuildingType": "Mixed use",
+      "Parking": "x"
+    }
+  ]
