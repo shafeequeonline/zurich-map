@@ -7,7 +7,7 @@ import dataFromJSON from './data.json'
 
 const Marker = ({ text, tooltip, parking, price, $hover }) => {
     const showDetails = () => {
-        // console.log(`You clicked on ${tooltip}`);
+        console.log(`You clicked on ${tooltip} ${parking} ${price}`);
     };
 
     return ( 
@@ -64,10 +64,13 @@ mapMarkers.forEach((item) => {
     }
 })
 
-// console.log(mapMarkers);
 // Function to filter markers based on the selection
+/** 
+ * array: array to iterate
+ * type: selected value of the property or feature type eg: Residential, Parking
+ * name: name of the select box
+*/
 function filterProperty(array, type, name) {
-    // console.log(type, array.filter((data) => {return data.rest.BuildingType === type}));
     // setting  new attribute to make show and hide the markers
     let data = array.filter((data) => {
         
@@ -108,10 +111,10 @@ class Map extends Component {
             category: 'Residential'
         }
 
-        this.handleChange = this.handleChange.bind(this)
+        this.handleSelectChange = this.handleSelectChange.bind(this)
     }
 
-    handleChange(event) {
+    handleSelectChange(event) {
         this.setState({category: event.target.value, name: event.target.name});
         filterProperty(mapMarkers, event.target.value, event.target.name)
     }
@@ -130,7 +133,7 @@ class Map extends Component {
                 <div className={styles.filter}>
                     <div className={styles.filterSelectWrapper}>
                         <label className={styles.selectboxLabel}>Price</label>
-                        <select className={styles.selectbox} name="Price" onChange={this.handleChange}>
+                        <select className={styles.selectbox} name="Price" onChange={this.handleSelectChange}>
                             <option value="0">0 - 1000 CHF</option>
                             <option value="1">1001 - 2000 CHF</option>
                             <option value="2">2001 - 5000 CHF</option>
@@ -138,7 +141,7 @@ class Map extends Component {
                     </div>
                     <div className={styles.filterSelectWrapper}>
                         <label className={styles.selectboxLabel}>Type</label>
-                        <select className={styles.selectbox} value={this.state.category} name="BuildingType" onChange={this.handleChange}>
+                        <select className={styles.selectbox} value={this.state.category} name="BuildingType" onChange={this.handleSelectChange}>
                             {propertyType.map((type) => {
                                 return <option value={type}>{type}</option>
                             })}
@@ -146,7 +149,7 @@ class Map extends Component {
                     </div>
                     <div className={styles.filterSelectWrapper}>
                         <label className={styles.selectboxLabel}>Parking</label>
-                        <select className={styles.selectbox} value={this.state.category} name="Parking" onChange={this.handleChange}>
+                        <select className={styles.selectbox} value={this.state.category} name="Parking" onChange={this.handleSelectChange}>
                             
                             {parkingArray.map((type) => {
                                 return <option value={type}>{type ? 'Yes' : 'No'}</option>
@@ -172,6 +175,10 @@ class Map extends Component {
                         )}
                         
                     </GoogleMapReact>
+                </div>
+                
+                <div className={styles.mapWrapperDetails} >
+                    More details have to be added here.
                 </div>
             </Fragment>
         );
