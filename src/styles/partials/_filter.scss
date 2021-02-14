@@ -1,3 +1,13 @@
 .filter {
-    
+    @include padding(10px, 1px, 10px, 10px);
+    display: flex;
+    border-top: 1px solid $gray-500;
+    border-bottom: 3px solid $gray-500;
+
+    &SelectWrapper {
+        flex: 1;
+    }
+    &LanguageSwitch {
+        width: 60px;
+    }
 }

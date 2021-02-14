@@ -2,7 +2,7 @@ import React , { Component, Fragment } from 'react';
 import styles from './styles/main.scss';
 
 import Filter from './filter.js';
-import Map from './map.js'
+import Map from './map.js';
 
 class App extends Component {
 	render() {

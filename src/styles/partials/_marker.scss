@@ -1,7 +1,7 @@
 .marker {
     background-color: $red;
     color: $white;
-    @include padding(5px);
+    @include padding(5px, 5px, 5px, 5px);
     @include border-radius(20px);
     //@include transition(all 500ms ease-in);
     width: 20px;
@@ -22,7 +22,7 @@
     }
 
     &Tooltip{
-        @include padding(7px);
+        @include padding(7px, 7px, 7px, 7px);
         @include border-radius(5px);
         background-color:$white;
         font-family: $font-family-base;

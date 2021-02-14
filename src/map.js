@@ -3,12 +3,11 @@ import GoogleMapReact from 'google-map-react';
 import styles from './styles/main.scss';
 
 // Imported Local JSON Data
-import MapData from './data.json'
+import dataFromJSON from './data.json'
 
 const Marker = ({ text, tooltip, parking, price, $hover }) => {
     const showDetails = () => {
         console.log(`You clicked on ${tooltip}`);
-        // markerTooltip.className += 'active'
     };
 
     return ( 
@@ -23,10 +22,10 @@ const Marker = ({ text, tooltip, parking, price, $hover }) => {
     )
 };
 
-const places = MapData;
-console.log(places);
+// Stored complete properties to the places variable
+const locations = dataFromJSON;
 
-let [...rest] = places;
+let [...rest] = locations;
 
 let mapMarkers = [];
 
@@ -47,7 +46,16 @@ rest.forEach((place) => {
         rest
     })
 })
-// console.log(mapMarkers);
+console.log(mapMarkers);
+
+function filterProperty(array, type) {
+    console.log(type, array.filter((data) => {return data.rest.BuildingType === type}));
+}
+filterProperty(mapMarkers, 'Residential')
+filterProperty(mapMarkers, 'Offices')
+filterProperty(mapMarkers, 'Commercial')
+filterProperty(mapMarkers, 'Industrial')
+filterProperty(mapMarkers, 'Mixed use')
 
 class Map extends Component {
     static defaultProps = {
@@ -60,6 +68,7 @@ class Map extends Component {
     
     /**<Marker at={47.3836514} lng={8.5482374} text="My Marker" />
      * <Marker lat={marker.cords[0]} lng={marker.cords[1]} text={index} tooltip={marker.type} parking={marker.parking} price={marker.price}/>
+     * 
      * **/
     
     render() {
