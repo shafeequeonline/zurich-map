@@ -6,3 +6,7 @@
 @mixin border-radius($value) {
     border-radius: $value $value $value $value;
 }
+
+@mixin transition($element, $speed, $animation) {
+    transition: $element, $speed, $animation;
+}
