@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;500&display=swap');
 // Colors
 $white:                   #fff !default;
 $gray-100:                #f8f9fa !default;
@@ -10,6 +11,7 @@ $gray-700:                #495057 !default;
 $gray-800:                #343a40 !default;
 $gray-900:                #212529 !default;
 $black:                   #000 !default;
+$red: #d83b01;
 
 $primary-color: $gray-900;
 
@@ -17,13 +19,13 @@ $primary-color: $gray-900;
 $font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace !default;
-$font-family-base:        $font-family-sans-serif !default;
+$font-family-base:        'Raleway', sans-serif;;
 
 $font-size-base:          1rem !default; // Assumes the browser default, typically `16px`
 
 $line-height-base:        1.5 !default;
 
-$font-weight-light:       300 !default;
+$font-weight-light:       100 !default;
 $font-weight-normal:      400 !default;
 $font-weight-strong:      500 !default;
 $font-weight-bold:        700 !default;

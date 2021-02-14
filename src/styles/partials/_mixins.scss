@@ -8,5 +8,5 @@
 }
 
 @mixin transition($element, $speed, $animation) {
-    transition: $element, $speed, $animation;
+    transition: $element $speed $animation;
 }

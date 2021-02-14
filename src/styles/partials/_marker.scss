@@ -1,29 +1,40 @@
 .marker {
-    background-color: $white;
-    color: $primary-color;
+    background-color: $red;
+    color: $white;
     @include padding(5px);
-    @include border-radius(10px);
-    @include transition(all, 250ms, ease-in);
-    width: 10px;
-    height: 10px;
+    @include border-radius(20px);
+    //@include transition(all 500ms ease-in);
+    width: 20px;
+    height: 20px;
     display: inline-flex;
     text-align: center;
     align-items: center;
     justify-content: center;
     transform: translate(-50%, -50%);
-
-    &:hover {
+    
+    &Hover {
         background-color: red;
-        .markerTooltip{
+        .markerTooltip {
             opacity: 1;
+            top:-30px;
+            @include transition(all, 350ms, ease);
         }
     }
 
     &Tooltip{
-        @include padding(5px);
-        display: none;
-        width: 100px;
-        height: 20px;
-        background-color: rebeccapurple;
+        @include padding(7px);
+        @include border-radius(5px);
+        background-color:$white;
+        font-family: $font-family-base;
+        font-weight: $font-weight-normal;
+        font-size: 14px;
+        border: 1px solid $gray-900;
+        color: $black;
+        text-align: left;
+        // display: none;
+        position: absolute;
+        top:30px;
+        opacity: 0;
+        width: 200px;
     }
 }

@@ -5,7 +5,23 @@ import styles from './styles/main.scss';
 // Imported Local JSON Data
 import MapData from './data.json'
 
-const Marker = ({ text, tooltip, parking, price }) => { return <div className={styles.marker}>{text} <div className={styles.markerTooltip}>{tooltip} {parking} {price}</div></div>};
+const Marker = ({ text, tooltip, parking, price, $hover }) => {
+    const showDetails = () => {
+        console.log(`You clicked on ${tooltip}`);
+        // markerTooltip.className += 'active'
+    };
+
+    return ( 
+        <div className={$hover ? styles.marker +' '+ styles.markerHover : styles.marker} onClick={showDetails}>
+            {text} 
+            <div className={styles.markerTooltip}>
+                Properrty Type: {tooltip} <br/>
+                Property Price: {price}/m^2 <br/>
+                Parking: {parking ? 'Yes' : 'No'} 
+            </div>
+        </div> 
+    )
+};
 
 const places = MapData;
 console.log(places);
