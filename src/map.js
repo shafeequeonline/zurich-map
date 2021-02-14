@@ -43,12 +43,12 @@ rest.forEach((place) => {
         // added rest datas to the object 
         cords:Coordinates.split('POINT').pop().split('(').pop().split(')').shift().split(' '), 
         price: rest["Price/m^2"],
-        parking: rest.Parking ? 'Yes' : 'No',
         rest,
         show: true
     })
 })
 
+// iterated through the array and omitted duplicate entries
 let propertyType = [];
 dataFromJSON.forEach((item) => {
     if(propertyType.indexOf(item.BuildingType) < 0) {
@@ -56,27 +56,39 @@ dataFromJSON.forEach((item) => {
     }
 })
 
+// iterated through the array and omitted duplicate entries
 let parkingArray = [];
 mapMarkers.forEach((item) => {
-    if(parkingArray.indexOf(item.parking) < 0) {
-        parkingArray.push(item.parking)
+    if(parkingArray.indexOf(item.rest.Parking) < 0) {
+        parkingArray.push(item.rest.Parking)
     }
 })
 
+// console.log(mapMarkers);
 // Function to filter markers based on the selection
 function filterProperty(array, type, name) {
     // console.log(type, array.filter((data) => {return data.rest.BuildingType === type}));
     // setting  new attribute to make show and hide the markers
     let data = array.filter((data) => {
-        console.log(name);
+        
         if(name === 'Parking') {
-            data.parking === 'Yes' ? data.show = true : data.show = false;
+            data.rest.Parking === type ? data.show = true : data.show = false;
         }
-        else if(name === 'BuildingType') {
+
+        if(name === 'BuildingType') {
             data.rest.BuildingType === type ? data.show = true : data.show = false;
         }
-        else if(name === 'Price') {
-            data.price > 3000 ? data.show = true : data.show = false;
+        if(name === 'Price') {
+            console.log(name, type);
+            if(type == 0) {
+                data.price <= 1001 ? data.show = true : data.show = false;
+            }
+            else if(type == 1) {
+                data.price <= 2001 ? data.show = true : data.show = false;
+            }
+            else{
+                data.price > 2001 ? data.show = true : data.show = false;
+            }
         }
         return data;
     })
@@ -137,7 +149,7 @@ class Map extends Component {
                         <select className={styles.selectbox} value={this.state.category} name="Parking" onChange={this.handleChange}>
                             
                             {parkingArray.map((type) => {
-                                return <option value={type}>{type}</option>
+                                return <option value={type}>{type ? 'Yes' : 'No'}</option>
                             })}
                         </select>
                     </div>
@@ -155,7 +167,7 @@ class Map extends Component {
                     defaultZoom={this.props.zoom}
                     >
                         {mapMarkers.map((marker, index) => 
-                            marker.show ? <Marker lat={marker.cords[0]} lng={marker.cords[1]} text={index} tooltip={marker.rest.BuildingType} parking={marker.parking} price={marker.price}/> : ''
+                            marker.show ? <Marker lat={marker.cords[0]} lng={marker.cords[1]} text={index} tooltip={marker.rest.BuildingType} parking={marker.rest.Parking} price={marker.price}/> : ''
                             
                         )}
                         

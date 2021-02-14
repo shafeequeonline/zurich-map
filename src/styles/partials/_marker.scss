@@ -16,7 +16,7 @@
         background-color: red;
         .markerTooltip {
             opacity: 1;
-            top:-30px;
+            top:-60px;
             @include transition(all, 350ms, ease);
         }
     }
