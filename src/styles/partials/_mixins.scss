@@ -1,1 +1,8 @@
 
+@mixin padding($value) {
+    padding: $value $value $value $value;
+}
+
+@mixin border-radius($value) {
+    border-radius: $value $value $value $value;
+}
