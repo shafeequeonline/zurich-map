@@ -1,7 +1,11 @@
 .selectbox {
     @include margin(10px, 10px, 10px, 10px);
+    @include padding(5px, 5px, 5px, 5px);
+    @include border-radius(5px);
+    box-sizing: border-box;
+    border: 3px solid rgba($gray-800, 0.5);
 
     &Label {
-
+        
     }
 }

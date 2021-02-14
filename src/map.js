@@ -7,7 +7,7 @@ import dataFromJSON from './data.json'
 
 const Marker = ({ text, tooltip, parking, price, $hover }) => {
     const showDetails = () => {
-        console.log(`You clicked on ${tooltip}`);
+        // console.log(`You clicked on ${tooltip}`);
     };
 
     return ( 
@@ -48,7 +48,6 @@ rest.forEach((place) => {
         show: true
     })
 })
-console.log(mapMarkers);
 
 let propertyType = [];
 dataFromJSON.forEach((item) => {
@@ -59,7 +58,6 @@ dataFromJSON.forEach((item) => {
 
 let parkingArray = [];
 mapMarkers.forEach((item) => {
-    console.log(item);
     if(parkingArray.indexOf(item.parking) < 0) {
         parkingArray.push(item.parking)
     }
@@ -67,15 +65,18 @@ mapMarkers.forEach((item) => {
 
 // Function to filter markers based on the selection
 function filterProperty(array, type, name) {
-    console.log(array);
     // console.log(type, array.filter((data) => {return data.rest.BuildingType === type}));
     // setting  new attribute to make show and hide the markers
     let data = array.filter((data) => {
+        console.log(name);
         if(name === 'Parking') {
             data.parking === 'Yes' ? data.show = true : data.show = false;
         }
         else if(name === 'BuildingType') {
             data.rest.BuildingType === type ? data.show = true : data.show = false;
+        }
+        else if(name === 'Price') {
+            data.price > 3000 ? data.show = true : data.show = false;
         }
         return data;
     })
@@ -100,7 +101,6 @@ class Map extends Component {
 
     handleChange(event) {
         this.setState({category: event.target.value, name: event.target.name});
-        console.log({name: event.target.name, category: event.target.value});
         filterProperty(mapMarkers, event.target.value, event.target.name)
     }
 
@@ -118,15 +118,15 @@ class Map extends Component {
                 <div className={styles.filter}>
                     <div className={styles.filterSelectWrapper}>
                         <label className={styles.selectboxLabel}>Price</label>
-                        <select className={styles.selectbox}>
-                            <option>0 - 1000 CHF</option>
-                            <option>1001 - 2000 CHF</option>
-                            <option>2001 - 5000 CHF</option>
+                        <select className={styles.selectbox} name="Price" onChange={this.handleChange}>
+                            <option value="0">0 - 1000 CHF</option>
+                            <option value="1">1001 - 2000 CHF</option>
+                            <option value="2">2001 - 5000 CHF</option>
                         </select>
                     </div>
                     <div className={styles.filterSelectWrapper}>
                         <label className={styles.selectboxLabel}>Type</label>
-                        <select value={this.state.category} name="BuildingType" onChange={this.handleChange}>
+                        <select className={styles.selectbox} value={this.state.category} name="BuildingType" onChange={this.handleChange}>
                             {propertyType.map((type) => {
                                 return <option value={type}>{type}</option>
                             })}
@@ -143,12 +143,12 @@ class Map extends Component {
                     </div>
                     <div className={styles.filterLanguageSwitch}>
                     <select className={styles.selectbox}>
-                            <option>DE</option>
                             <option>EN</option>
+                            <option>DE</option>
                         </select>
                     </div>
                 </div>
-                <div style={{ height: '80vh', width: '100%' }}>
+                <div className={styles.mapWrapper}>
                     <GoogleMapReact
                     bootstrapURLKeys={{ key: 'AIzaSyAuOXhl7_BjeaV30YlT3I9OH6oW9DkYdlA' }}
                     defaultCenter={this.props.center}

@@ -1,21 +1,20 @@
 
 //Padding mixin
 @mixin padding($top, $right, $bottom, $left) {
-    padding-top: $top;
-    padding-right: $right;
-    padding-bottom: $bottom;
-    padding-left: $left;
-  }
+    padding: $top $right $bottom $left;
+}
   //Margin mixin
-  @mixin margin($top, $right, $bottom, $left) {
+@mixin margin($top, $right, $bottom, $left) {
     margin-top: $top;
     margin-right: $right;
     margin-bottom: $bottom;
     margin-left: $left;
-  }
+}
 
-@mixin border-radius($value) {
-    border-radius: $value $value $value $value;
+@mixin border-radius($radius) {
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
 }
 
 @mixin transition($element, $speed, $animation) {
