@@ -1,7 +1,6 @@
 import React , { Component, Fragment } from 'react';
 import styles from './styles/main.scss';
 
-import Filter from './filter.js';
 import Map from './map.js';
 
 class App extends Component {
@@ -9,8 +8,6 @@ class App extends Component {
 	return(
 			<Fragment>
 				<h1 className={styles.header}>Zurich Map</h1>
-
-				<Filter />
 
 				<Map />
 
